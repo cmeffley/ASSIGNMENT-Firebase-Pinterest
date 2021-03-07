@@ -14,7 +14,7 @@ const navBar = () => {
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#" id="all-boards">Boards<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" id="every-board">Boards<span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <div id="logout-button"></div>
