@@ -5,6 +5,8 @@ import homePageBuilder from '../components/homePageBuilder';
 import homePage from '../components/homePage';
 import { emptyBoards, showBoards } from '../components/boards';
 import getAllBoards from '../helpers/data/boardData';
+// import getAllPins from '../helpers/data/pinData';
+// import { emptyPins, showPins } from '../components/pins';
 
 const startApp = () => {
   domBuilder();
@@ -17,6 +19,13 @@ const startApp = () => {
       emptyBoards();
     }
   });
+  // getAllPins().then((response) => {
+  //   if (response.length) {
+  //     showPins(response);
+  //   } else {
+  //     emptyPins();
+  //   }
+  // });
 };
 
 const startHomepage = () => {
