@@ -16,4 +16,11 @@ const getAllBoards = (uid) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export default getAllBoards;
+// GET SINGLE BOARD
+const getSingleBoard = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/boards${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
+
+export { getAllBoards, getSingleBoard };
