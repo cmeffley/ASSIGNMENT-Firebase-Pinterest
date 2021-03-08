@@ -4,8 +4,8 @@ import firebaseConfig from '../apiKeys';
 const dbUrl = firebaseConfig.databaseURL;
 
 // GET ALL PINS
-const getAllPins = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/pins.json`)
+const getAllPins = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/pins.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));

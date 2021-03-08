@@ -4,8 +4,8 @@ import firebaseConfig from '../apiKeys';
 const dbUrl = firebaseConfig.databaseURL;
 
 // GET ALL BOARDS
-const getAllBoards = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/boards.json`)
+const getAllBoards = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/boards.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
       console.warn(response.data);
       if (response.data) {
