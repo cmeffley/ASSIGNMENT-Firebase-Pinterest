@@ -3,11 +3,10 @@ import firebaseConfig from '../apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
 
-// GET ALL BOARDS
-const getAllBoards = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/boards.json?orderBy="uid"&equalTo="${uid}"`)
+// GET ALL PINS
+const getAllPins = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/pins.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
-      console.warn(response.data);
       if (response.data) {
         resolve(Object.values(response.data));
       } else {
@@ -16,4 +15,4 @@ const getAllBoards = (uid) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export default getAllBoards;
+export default getAllPins;
