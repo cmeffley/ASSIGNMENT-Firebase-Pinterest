@@ -2,6 +2,8 @@ import { deleteBoardAndPins, seePinsOnBoard } from '../../helpers/data/boardPinD
 import { deletePins } from '../../helpers/data/pinData';
 import boardInfo from '../boardInfo';
 import { showBoards } from '../boards';
+import addBoardForm from '../forms/addBoardForm';
+import addPinForm from '../forms/addPinForm';
 import { showPins } from '../pins';
 
 const domEvents = (uid) => {
@@ -32,6 +34,14 @@ const domEvents = (uid) => {
         const firebaseKey = e.target.id.split('--')[1];
         deleteBoardAndPins(firebaseKey, uid).then((boardsArray) => showBoards(boardsArray));
       }
+    }
+
+    if (e.target.id.includes('add-board-btn')) {
+      addBoardForm();
+    }
+
+    if (e.target.id.includes('add-pin-btn')) {
+      addPinForm();
     }
   });
 };

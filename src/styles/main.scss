@@ -2,7 +2,8 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  background-color: antiquewhite;
+  // background-color: antiquewhite;
+  background: url('https://i.pinimg.com/736x/4e/5e/05/4e5e05d394178cc2ce32b06e886310fa.jpg');
   color: brown;
   text-align: center;
   margin-top: 100px;
@@ -20,7 +21,7 @@ body {
   align-content: center;
 }
 
-#all-boards {
+#boards {
   width: 90%;
   display: flex;
   flex-flow: row wrap;
@@ -41,4 +42,11 @@ body {
   text-align: center;
   margin: auto;
   justify-content: center;
+}
+
+#form-container {
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  color: white;
 }
