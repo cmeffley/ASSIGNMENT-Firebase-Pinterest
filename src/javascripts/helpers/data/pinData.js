@@ -19,8 +19,8 @@ const getAllPins = () => new Promise((resolve, reject) => {
 
 // GET SPECIFIC PINS
 const getAssociatedPins = (boardId) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/pins/${boardId}.json`)
-    .then((response) => resolve(response))
+  axios.get(`${dbUrl}/pins.json?orderBy="board_id"&equalTo="${boardId}"`)
+    .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
 
