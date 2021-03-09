@@ -16,6 +16,9 @@ const navBar = () => {
       <li class="nav-item active">
         <a class="nav-link" href="#" id="every-board">Boards<span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+      <a class="nav-link" href="#" id="every-pin">Pins<span class="sr-only">(current)</span></a>
+      </li>
     </ul>
     <div id="logout-button"></div>
   </div>

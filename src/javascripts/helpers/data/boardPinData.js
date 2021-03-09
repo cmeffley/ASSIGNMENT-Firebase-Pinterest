@@ -1,5 +1,5 @@
-import getSingleBoard from './boardData';
-import getAssociatedPins from './pinData';
+import { getSingleBoard } from './boardData';
+import { getAssociatedPins } from './pinData';
 
 const seePinsOnBoard = (boardId) => new Promise((resolve, reject) => {
   const board = getSingleBoard(boardId);

@@ -5,11 +5,13 @@ import homePageBuilder from '../components/homePageBuilder';
 import homePage from '../components/homePage';
 import { emptyBoards, showBoards } from '../components/boards';
 import { getAllBoards } from '../helpers/data/boardData';
-// import { getAllPins } from '../helpers/data/pinData';
-// import { emptyPins, showPins } from '../components/pins';
+import domEvents from '../components/events/domEvents';
+import { getAllPins } from '../helpers/data/pinData';
+import { emptyPins, showPins } from '../components/pins';
 
 const startApp = (userObject) => {
   domBuilder();
+  domEvents();
   navBar();
   logoutButton();
   getAllBoards(userObject.uid).then((response) => {
@@ -19,13 +21,13 @@ const startApp = (userObject) => {
       emptyBoards();
     }
   });
-  // getAllPins(userObject.uid).then((response) => {
-  //   if (response.length) {
-  //     showPins(response);
-  //   } else {
-  //     emptyPins();
-  //   }
-  // });
+  getAllPins(userObject.uid).then((response) => {
+    if (response.length) {
+      showPins(response);
+    } else {
+      emptyPins();
+    }
+  });
 };
 
 const startHomepage = () => {
