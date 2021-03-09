@@ -3,11 +3,11 @@ import { getAssociatedPins } from './pinData';
 
 const seePinsOnBoard = (boardId) => new Promise((resolve, reject) => {
   const board = getSingleBoard(boardId);
-  const pin = getAssociatedPins(boardId);
+  const pins = getAssociatedPins(boardId);
 
-  Promise.all([board, pin])
+  Promise.all([board, pins])
     .then(([boardResponse, pinResponse]) => resolve(
-      { board: boardResponse, pin: pinResponse }
+      { board: boardResponse, pins: pinResponse }
     ))
     .catch((error) => reject(error));
 });

@@ -8,12 +8,14 @@ import { getAllBoards } from '../helpers/data/boardData';
 import domEvents from '../components/events/domEvents';
 import { getAllPins } from '../helpers/data/pinData';
 import { emptyPins, showPins } from '../components/pins';
+import navigationEvents from '../components/events/navigationEvents';
 
 const startApp = (userObject) => {
   domBuilder();
   domEvents();
   navBar();
   logoutButton();
+  navigationEvents();
   getAllBoards(userObject.uid).then((response) => {
     if (response.length) {
       showBoards(response);

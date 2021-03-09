@@ -1,6 +1,6 @@
 const showPins = (array) => {
   document.querySelector('#home').innerHTML = '';
-  document.querySelector('#title').innerHTML = '';
+  document.querySelector('#title').innerHTML = '<h1>PINS</h1>';
   document.querySelector('#all-boards').innerHTML = '';
   document.querySelector('#boards').innerHTML = '';
   document.querySelector('#pins').innerHTML = '';
@@ -11,7 +11,7 @@ const showPins = (array) => {
     <div class="card-body" style="height: 150px;">
     <h4 class="board-title">${element.title}</h4>
     <hr>
-    <button class="btn btn-danger" id="delete-board">Delete Board</button>
+    <button class="btn btn-danger" id="delete-board">Delete Pin</button>
     </div>
     </div>`;
   });
