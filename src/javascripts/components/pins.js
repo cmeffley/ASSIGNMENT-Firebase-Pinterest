@@ -12,6 +12,7 @@ const showPins = (array) => {
     <div class="card-body" style="height: 150px;">
     <h4 class="board-title">${element.title}</h4>
     <hr>
+    <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="edit-pin-btn--${element.firebaseKey}">Edit Pin</button>
     <button class="btn btn-danger" id="delete-pin--${element.firebaseKey}">Delete Pin</button>
     </div>
     </div>`;
@@ -19,6 +20,7 @@ const showPins = (array) => {
 };
 
 const emptyPins = () => {
+  document.querySelector('#button').innerHTML = '<button class="btn btn-outline-light" id="add-pin-btn">Add A Pin</button>';
   document.querySelector('#pins').innerHTML = '<h1>No Pins</h1>';
 };
 

@@ -1,10 +1,17 @@
 import { createBoard } from '../../helpers/data/boardData';
 import { deleteBoardAndPins, seePinsOnBoard } from '../../helpers/data/boardPinData';
-import { createPin, deletePins } from '../../helpers/data/pinData';
+import {
+  createPin,
+  deletePins,
+  getSinglePin,
+  updatePin
+} from '../../helpers/data/pinData';
 import boardInfo from '../boardInfo';
 import { showBoards } from '../boards';
 import addBoardForm from '../forms/addBoardForm';
 import addPinForm from '../forms/addPinForm';
+import editPinForm from '../forms/editPinForm';
+import formModal from '../forms/formModal';
 import { showPins } from '../pins';
 
 const domEvents = (uid) => {
@@ -65,6 +72,25 @@ const domEvents = (uid) => {
         uid
       };
       createPin(pinObject, uid).then((pinArray) => showPins(pinArray));
+    }
+    // SHOW MODAL
+    if (e.target.id.includes('edit-pin-btn')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      formModal('Edit Book');
+      getSinglePin(firebaseKey).then((pinObject) => editPinForm(pinObject));
+    }
+
+    // EDIT PIN
+    if (e.target.id.includes('update-pin')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      e.preventDefault();
+      const pinObject = {
+        title: document.querySelector('#new-pin-name').value,
+        image: document.querySelector('#pinPicture').value,
+        board_id: document.querySelector('#select-board').value,
+      };
+      updatePin(firebaseKey, pinObject).then((pinArray) => showPins(pinArray));
+      $('#formModal').modal('toggle');
     }
   });
 };

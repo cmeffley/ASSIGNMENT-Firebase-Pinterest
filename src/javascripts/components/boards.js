@@ -19,6 +19,7 @@ const showBoards = (array) => {
 };
 
 const emptyBoards = () => {
+  document.querySelector('#button').innerHTML = '<button class="btn btn-outline-light" id="add-board-btn">Add A Board</button>';
   document.querySelector('#boards').innerHTML = '<h1>No Boards</h1>';
 };
 
