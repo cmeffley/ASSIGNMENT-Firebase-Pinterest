@@ -31,4 +31,20 @@ const deletePins = (firebaseKey, uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getAllPins, getAssociatedPins, deletePins };
+// CREATE NEW PIN
+const createPin = (pinObject, uid) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/pins.json`, pinObject)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/pins/${response.data.name}.json`, body).then(() => {
+        getAllPins(uid).then((pinsArray) => resolve(pinsArray));
+      });
+    }).catch((error) => reject(error));
+});
+
+export {
+  getAllPins,
+  getAssociatedPins,
+  deletePins,
+  createPin
+};

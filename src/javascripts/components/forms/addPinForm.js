@@ -1,3 +1,5 @@
+import selectBoard from './selectBoard';
+
 const addPinForm = () => {
   document.querySelector('#title').innerHTML = '';
   document.querySelector('#button').innerHTML = '';
@@ -8,8 +10,13 @@ const addPinForm = () => {
     <input type="text" class="form-control" id="new-pin-name" aria-describedby="pinName" placeholder="Enter Pin Name" required><br/>
     <label for="basic-url" class="form-label">Add Picture</label>
     <input type="text" class="form-control" id="pinPicture" placeholder="Url" required><br/>
-  <button type="submit" id="submit-board" class="btn btn-outline-light">Submit Board</button>
+    </div>
+    <div class="form-group" id="select-board">
+    </div>
+    <button type="submit" id="submit-pin" class="btn btn-outline-light">Submit Pin</button>
 </form>`;
+
+  selectBoard();
 };
 
 export default addPinForm;
