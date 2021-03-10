@@ -1,7 +1,8 @@
 const showPins = (array) => {
   document.querySelector('#home').innerHTML = '';
   document.querySelector('#title').innerHTML = '<h1>PINS</h1>';
-  document.querySelector('#all-boards').innerHTML = '';
+  document.querySelector('#button').innerHTML = '<button class="btn btn-outline-light" id="add-pin-btn">Add A Pin</button>';
+  document.querySelector('#form-container').innerHTML = '';
   document.querySelector('#boards').innerHTML = '';
   document.querySelector('#pins').innerHTML = '';
 
