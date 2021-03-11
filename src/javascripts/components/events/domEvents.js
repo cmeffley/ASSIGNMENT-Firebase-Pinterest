@@ -85,8 +85,6 @@ const domEvents = (uid) => {
       const firebaseKey = e.target.id.split('--')[1];
       e.preventDefault();
       const pinObject = {
-        title: document.querySelector('#new-pin-name').value,
-        image: document.querySelector('#pinPicture').value,
         board_id: document.querySelector('#select-board').value,
       };
       updatePin(firebaseKey, pinObject).then((pinArray) => showPins(pinArray));
