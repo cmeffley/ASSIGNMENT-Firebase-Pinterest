@@ -4,7 +4,7 @@ import { getAllBoards } from '../../helpers/data/boardData';
 
 const selectBoard = (boardObject = {}) => {
   let domString = `<label for="board">Select a Board</label>
-    <select class="form-control" id="board-select" required>
+    <select class="form-control" id="select-board" required>
     <option value="">Select a Board</option>`;
 
   getAllBoards(firebase.auth().currentUser.uid).then((boardArray) => {
@@ -18,7 +18,7 @@ const selectBoard = (boardObject = {}) => {
 
     domString += '</select>';
 
-    document.querySelector('#select-board').innerHTML = domString;
+    document.querySelector('#select-board-drop').innerHTML = domString;
   });
 };
 

@@ -3,7 +3,7 @@
 
 body {
   background: url('https://cdn.shopify.com/s/files/1/0511/3637/products/wall_47e6d8f5-bcae-4416-b67b-03c590722526.jpg?v=1521664058');
-  color: rgb(117, 49, 49);
+  color: rgb(245, 210, 210);
   text-align: center;
   margin-top: 100px;
 }
@@ -57,4 +57,22 @@ body {
 
 #modal-body, #formModalLabel {
   color: black;
+}
+
+#pin-style {
+  transition: transform 300ms, box-shadow 300ms;
+  color: black;
+}
+
+#pin-style:hover {
+  transform: scale(1.1);
+  color: black;
+}
+
+#board-style {
+  transition: transform 300ms, box-shadow 300ms;
+}
+
+#board-style:hover {
+  transform: scale(1.1);
 }
