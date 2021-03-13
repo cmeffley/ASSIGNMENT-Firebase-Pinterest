@@ -29,3 +29,9 @@ https://www.figma.com/file/pS3Aad1NBYd600PJTwhmgx/Firebase-Pinterest?node-id=0%3
 ### Project Board
 
 https://github.com/cmeffley/ASSIGNMENT-Firebase-Pinterest/projects/1
+
+![2021-03-12](https://user-images.githubusercontent.com/76795299/111015477-eff32100-8376-11eb-988a-124044136dce.png)
+
+[Loom Video Walkthrough](https://www.loom.com/share/da7caacde264480bb80973a120f724cb)
+#### Contrubutor
+[Chris Meffley](https://github.com/cmeffley)

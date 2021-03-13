@@ -1,6 +1,6 @@
 const homePage = () => {
   document.querySelector('#home-nav').innerHTML = `<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand title" href="#">Firebase<img src="../../../documentation/pinterestLogo.png">Pinterest</a>
+  <a class="navbar-brand title" href="#">Firebase Pinterest</a>
   <button 
     class="navbar-toggler" 
     type="button" 
