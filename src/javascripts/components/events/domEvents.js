@@ -38,7 +38,7 @@ const domEvents = (uid) => {
     // DELETE BOARDS AND PINS
     if (e.target.id.includes('delete-board')) {
       // eslint-disable-next-line no-alert
-      if (window.confirm('Want to delete?')) {
+      if (window.confirm('Want to delete? All Pins will delete too.')) {
         const firebaseKey = e.target.id.split('--')[1];
         deleteBoardAndPins(firebaseKey, uid).then((boardsArray) => showBoards(boardsArray));
       }
