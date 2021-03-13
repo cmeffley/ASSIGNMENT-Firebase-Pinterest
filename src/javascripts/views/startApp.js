@@ -6,8 +6,8 @@ import homePage from '../components/homePage';
 import { emptyBoards, showBoards } from '../components/boards';
 import { getAllBoards } from '../helpers/data/boardData';
 import domEvents from '../components/events/domEvents';
-import { getAllPins } from '../helpers/data/pinData';
-import { emptyPins, showPins } from '../components/pins';
+// import { getAllPins } from '../helpers/data/pinData';
+// import { emptyPins, showPins } from '../components/pins';
 import navigationEvents from '../components/events/navigationEvents';
 
 const startApp = (userObject) => {
@@ -23,13 +23,13 @@ const startApp = (userObject) => {
       emptyBoards();
     }
   });
-  getAllPins(userObject.uid).then((response) => {
-    if (response.length) {
-      showPins(response);
-    } else {
-      emptyPins();
-    }
-  });
+  // getAllPins(userObject.uid).then((response) => {
+  //   if (response.length) {
+  //     showPins(response);
+  //   } else {
+  //     emptyPins();
+  //   }
+  // });
 };
 
 const startHomepage = () => {

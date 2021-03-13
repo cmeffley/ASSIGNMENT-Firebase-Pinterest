@@ -3,8 +3,7 @@ import selectBoard from './selectBoard';
 const addPinForm = () => {
   document.querySelector('#title').innerHTML = '';
   document.querySelector('#button').innerHTML = '';
-  document.querySelector('#boards').innerHTML = '';
-  document.querySelector('#pins').innerHTML = '';
+  document.querySelector('#see-cards').innerHTML = '';
   document.querySelector('#form-container').innerHTML = `<form id="new-pin-form" class="mb-4">
   <div class="form-group">
     <label for="title">Pin Name</label>
