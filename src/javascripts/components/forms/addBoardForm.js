@@ -1,7 +1,7 @@
 const addBoardForm = () => {
   document.querySelector('#title').innerHTML = '';
   document.querySelector('#button').innerHTML = '';
-  document.querySelector('#boards').innerHTML = '';
+  document.querySelector('#see-cards').innerHTML = '';
   document.querySelector('#form-container').innerHTML = `<form id="new-board-form" class="mb-4">
   <div class="form-group">
     <label for="title">Board Name</label>

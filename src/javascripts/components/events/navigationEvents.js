@@ -4,7 +4,7 @@ import { emptyBoards, showBoards } from '../boards';
 import { emptyPins, showPins } from '../pins';
 
 const navigationEvents = (uid) => {
-  // ALL CARDS
+  // GO TO ALL BOARDS
   document.querySelector('#every-board').addEventListener('click', () => {
     getAllBoards(uid).then((boardArray) => {
       if (boardArray.length) {
@@ -15,6 +15,7 @@ const navigationEvents = (uid) => {
     });
   });
 
+  // GO TO ALL PINS
   document.querySelector('#every-pin').addEventListener('click', () => {
     getAllPins(uid).then((pinArray) => {
       if (pinArray.length) {

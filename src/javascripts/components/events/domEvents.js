@@ -68,7 +68,7 @@ const domEvents = (uid) => {
       const pinObject = {
         title: document.querySelector('#new-pin-name').value,
         image: document.querySelector('#pinPicture').value,
-        board_id: document.querySelector('#board-select').value,
+        board_id: document.querySelector('#select-board').value,
         uid
       };
       createPin(pinObject, uid).then((pinArray) => showPins(pinArray));
@@ -76,7 +76,7 @@ const domEvents = (uid) => {
     // SHOW MODAL
     if (e.target.id.includes('edit-pin-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
-      formModal('Edit Book');
+      formModal('Change to different board');
       getSinglePin(firebaseKey).then((pinObject) => editPinForm(pinObject));
     }
 
@@ -85,8 +85,6 @@ const domEvents = (uid) => {
       const firebaseKey = e.target.id.split('--')[1];
       e.preventDefault();
       const pinObject = {
-        title: document.querySelector('#new-pin-name').value,
-        image: document.querySelector('#pinPicture').value,
         board_id: document.querySelector('#select-board').value,
       };
       updatePin(firebaseKey, pinObject).then((pinArray) => showPins(pinArray));
