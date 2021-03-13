@@ -1,55 +1,31 @@
-# Pinterest
+# Firebase Pinterest
 
-Your team has been tasked with creating pinterest.  If you live under a rock and have never used pinterest before go figure out what it does. TLDR; users create boards and can pin urls to the boards
+Firebase Pinterest is a simplified version of Pinterest. It allows you to view Boards and Pins associated with those boards. You can add and delete boards and pins, and also reassign pins to a different board.
 
-## Requirements
-* Clean code - single responsibility principle
-* ES6 Modules bundled with webpack
-* No errors - linters should be clean
-* SASS and Bootstrap for styling
-* Completely planned out - before each section you should be making new cards before you code.  You should have wireframes and an ERD
+### Deployed Site
 
-## HW Parts
+https://cm-firebasepinterest.netlify.app/
 
-### Part 1: ERDs and Authentication
-* Create an ERD for pinterest (do this in studygroup)
-* Clone this repo
-* Create a setup branch
-* Do all the stuff needed when setting up the project. Reference the webpack instructions if needed. These include making the updates to the `.env` file
-  * Create a new firebase project, database, and enable google authentication, etc.
-* Create an authentication branch and add a navbar with logout button, and place the google login button somewhere for you to test
-  * **Note: There are components that you can use to get started and style later. We just want you to get your auth setup by yourself.**
-* When your user is **logged out** they should see the navbar with only a brand.  And an h1 on the page that says PINTEREST (make a `home` component for this)
-* When your user is logged in they should see a navbar with a brand and a logout button and an H1 on the page that says Boards (make a `boards` component for this)
+### User Description
 
-### Part 2: READ
-#### Setup
-* Create some json data
-* Import that data into firebase
+The user is someone who likes to organize their interests and then break those interests down into different categories.
 
-#### User Stories
-* As a user, when I am logged in and the page loads, I should see all the boards that belong to me.
 
-* As a user, when I click on one of my boards, I should see a single board view that shows all pins for that board.
+Once the user is able to login using Google authentication, they first see only the boards they have created. They can click the pins link in the navigation bar to see only thier pins. The user can create new boards and pins, delete them and assign pins to specific boards. 
 
-* As a user, when I am on the single board view, there should be some way to go back to all my boards.
+### Features
+ - The user must login with Google authentication
+ - Navigate between viewing only boards and pins
+ - After selecting a specific board, only the pins associated with that board are visible.
+ - Create a new board
+ - Create a new pin and assign it to a board
+ - Change what board a pin is assigned to
+ - Delete boards and all associated pins
+ - Delete a pin only
 
-### Part 3: DELETE
-* As a user, I should be able to delete a pin from one of my boards.
+ ### Wireframe 
+https://www.figma.com/file/pS3Aad1NBYd600PJTwhmgx/Firebase-Pinterest?node-id=0%3A1
 
-* As a user, I should be able to delete one of my boards.
+### Project Board
 
-* As a user, when I delete one of my boards all pins that were on that board should be deleted as well.
-
-### Part 4: CREATE
-* As a user, I should be able to create a new pin.
-
-* As a user, I should be able to create a new board.
-
-### Part 5: UPDATE
-* As a user, I should be able to change which board a pin belongs to.
-
-### Part 6: Deploy and Readme
-* As a user I should be able to use your app on the internet - it should be deployed using Netlify.
-
-* As a developer, I want to see an amazing README for this project.
+https://github.com/cmeffley/ASSIGNMENT-Firebase-Pinterest/projects/1
